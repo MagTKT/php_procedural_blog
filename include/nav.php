@@ -14,7 +14,7 @@
           </ul>
           
             <?php
-            if(isset($_SESSION['username']) && $_SESSION['username'] == 'admin'){
+            if(isset($_SESSION['username'])){
             ?>
               <li class="nav-item"> 
                 <a class="nav-link" href="index.php?action=admin">Acces administration </a>

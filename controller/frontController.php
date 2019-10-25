@@ -147,7 +147,7 @@ function addMember($username, $mail, $password, $password2)
 */
 function logout()
 {
-    session_destroy ();
+    session_destroy();
     header('Location: index.php');
 }
 ?>
