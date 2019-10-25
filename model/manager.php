@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../config/config.php';
 
-function connect()
+function dbConnect ()
 {
     try {
         return new PDO(
@@ -10,19 +10,8 @@ function connect()
             DATABASE_CONFIG['user'],
             DATABASE_CONFIG['password']
         );
-        return new PDO('mysql==mariadb;dbname=mag;charset=utf8', 'root', 'root');
     } catch (PDOException $e) {
         print "Erreur !: " . $e->getMessage() . "<br/>";
         die();
     }
-}
-
-function getPost()
-{
-    $db = connect();
-
-    $query = $db->prepare('SELECT * FROM posts');
-    $query->execute();
-
-    return $query->fetchAll();
 }

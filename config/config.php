@@ -2,7 +2,7 @@
 
 const DATABASE_CONFIG = [
     'host' => 'mariadb',
-    'database' => 'magblog',
+    'database' => 'blogmag',
     'user' => 'root',
     'password' => 'root'
 ];
